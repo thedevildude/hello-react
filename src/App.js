@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import TaskCard from "./TaskCard";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className="text-2xl font-bold">Smarter Tasks</h1>
+      <div>
+        <h1>Pending</h1>
+        <div>
+          <TaskCard
+            title="Build the website using static content"
+            dueDate="14th April"
+            assigneeName="Rohit S"
+          />
+          <TaskCard
+            title="Add a blog"
+            dueDate="22nd March"
+            assigneeName="Rohit M"
+          />
+        </div>
+      </div>
+      <div>
+        <h1>Done</h1>
+        <TaskCard
+          title="Design the mockup"
+          completedAtDate="10th April"
+          assigneeName="Rohit M"
+        />
+        <TaskCard
+          title="Get the approval from principal"
+          completedAtDate="10th April"
+          assigneeName="Rohit M"
+        />
+      </div>
     </div>
   );
 }
